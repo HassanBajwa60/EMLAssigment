@@ -1,0 +1,107 @@
+import turtle 
+from math import sqrt
+
+ben = turtle.Turtle()
+
+window = turtle.Screen()
+window.bgcolor("Blue")
+ben.pen(pencolor = "White")
+ben.pensize(4)
+ben.speed(5)
+
+#ThisFunctionIsUsedToDefineOneStepofTurtle,IncludingAdistanceandangle
+def OneStep(angle,distance):
+    ben.left(angle)
+    ben.forward(distance)
+#FunctionToWriteH
+def MethodForHLine():
+    OneStep(90,50)
+    OneStep(180,100)
+    OneStep(180,50)
+    ben.right(90)
+#FunctionToWriteS
+def MethodForS():
+    ben.forward(65)
+    ben.pendown()
+    OneStep(180,30)
+    OneStep(90,25)
+    OneStep(90,30)
+    ben.right(90)
+    ben.forward(25)
+    ben.right(90)
+    ben.forward(32)
+#FunctionToWriteA
+def MethodForA():
+    ben.right(0.7*90)
+    ben.forward(40*sqrt(2))
+    ben.penup()
+    ben.right(180)
+    ben.forward(58)
+    ben.pendown()
+    ben.left(0.7*180)
+    ben.forward(40*sqrt(2))
+    ben.left(180)
+    ben.penup()
+    ben.forward(20*sqrt(2))
+    ben.pendown()
+    
+    ben.right(0.7*90)
+    ben.forward(27)
+    ben.penup()
+    ben.left(0.7*180)
+    ben.forward(30)
+    ben.right(125)
+
+def GetBackFromS():
+    ben.penup()
+    ben.right(90)
+    ben.forward(49)
+    ben.right(90)
+    ben.forward(5)
+#FunctionToWriteN
+def MethodForN():
+    ben.forward(50)
+    ben.right(180)
+    ben.penup()
+    ben.forward(50)
+    ben.pendown()
+    ben.right(150)
+    ben.forward(58)
+    ben.left(150)
+    ben.forward(50)
+
+#H    
+MethodForHLine()
+ben.forward(35)
+MethodForHLine()
+ben.penup()
+ben.forward(35)
+ben.pendown()
+#A
+MethodForA()
+#S
+MethodForS()
+GetBackFromS()
+#S
+MethodForS()
+GetBackFromS()
+
+ben.forward(60)
+ben.pendown()
+#A
+MethodForA()
+
+ben.forward(35)
+ben.right(90)
+ben.pendown()
+#N
+MethodForN()
+ben.penup()
+ben.forward(120)
+ben.pendown()
+ben.pen(pencolor = "Red")
+for i in range(20):
+    ben.forward(i * 10)
+    ben.right(144)
+
+turtle.done()

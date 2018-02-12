@@ -1,0 +1,174 @@
+# -*- coding: utf-8 -*-
+import turtle 
+from math import sqrt
+
+ben = turtle.Turtle()
+
+window = turtle.Screen()
+window.bgcolor("Blue")
+ben.pen(pencolor = "White")
+ben.pensize(1)
+ben.speed(5)
+
+#ThisFunctionIsUsedToDefineOneStepofTurtle,IncludingAdistanceandangle
+def OneStepLF(angle,distance):
+    ben.left(angle)
+    ben.forward(distance)
+
+def OneStepRF(angle,distance):
+    ben.right(angle)
+    ben.forward(distance)
+#FunctionToWriteH
+def MethodForHLine():
+    OneStepLF(90,50)
+    OneStepLF(180,100)
+    OneStepLF(180,50)
+    ben.right(90)
+    
+def MethodForS():
+    ben.circle(10,210)
+    ben.right(75)
+    ben.down()
+    ben.circle(-10,210)
+    ben.right(60)
+
+#H
+MethodForHLine()
+ben.forward(35)
+MethodForHLine()
+ben.forward(10)
+#ForHRoundCircle
+ben.circle(60, 190)
+ben.circle(100, 220)
+ben.left(115)
+#a
+ben.circle(15,210)
+OneStepLF(75,30)
+OneStepRF(180,30)
+OneStepLF(135,30*sqrt(2))
+ben.left(125)
+#s
+MethodForS()
+ben.forward(48)
+ben.left(135)
+#s
+MethodForS()
+ben.forward(45)
+OneStepRF(30,10)
+ben.left(180)
+#a
+ben.circle(17,180)
+OneStepLF(90,35)
+OneStepLF(180,35)
+OneStepLF(90,15)
+OneStepLF(90,35)
+OneStepRF(90,10)
+OneStepRF(90,37)
+#ReturnForB
+ben.penup()
+OneStepRF(90,15)
+OneStepRF(90,150)
+#B
+ben.right(180)
+ben.pendown()
+ben.forward(220)
+ben.right(180)
+ben.penup()
+ben.forward(170)
+ben.right(90)
+ben.pendown()
+ben.circle(-35,180)
+ben.right(180)
+ben.circle(-35,180)
+#ReturnForA
+OneStepRF(90,70)
+ben.right(90)
+ben.penup()
+ben.forward(60)
+ben.pendown()
+ben.right(180)
+#a
+ben.circle(17,180)
+OneStepLF(90,35)
+ben.right(180)
+ben.penup()
+ben.forward(35)
+ben.left(35)
+ben.pendown()
+ben.forward(10)
+
+ben.penup()
+OneStepLF(145,35)
+OneStepRF(90,20)
+ben.right(90)
+ben.pendown()
+#J
+ben.forward(150)
+OneStepRF(90,100)
+ben.right(180)
+ben.penup()
+ben.forward(100)
+OneStepLF(90,180)
+
+ben.left(90)
+ben.pendown()
+ben.forward(30)
+ben.right(180)
+ben.penup()
+ben.forward(30)
+ben.pendown()
+ben.forward(30)
+
+ben.right(90)
+ben.penup()
+ben.forward(30)
+ben.pendown()
+
+ben.forward(43)
+ben.left(135)
+ben.forward(25)
+OneStepRF(80,25)
+OneStepLF(130,40)
+
+ben.right(90)
+ben.penup()
+ben.forward(30)
+ben.pendown()
+ben.right(180)
+#a
+ben.circle(17,180)
+OneStepLF(90,35)
+OneStepRF(180,35)
+OneStepLF(35,10)
+
+#Endline
+ben.right(35)
+ben.penup()
+ben.forward(40)
+ben.right(90)
+ben.pendown()
+ben.forward(120)
+
+ben.right(180)
+ben.penup()
+ben.forward(120)
+ben.pendown()
+ben.forward(30)
+
+ben.left(90)
+ben.penup()
+ben.forward(10)
+ben.left(90)
+ben.forward(20)
+ben.pendown()
+ben.dot()
+
+ben.penup()
+ben.setx(-100)
+ben.sety(-100)
+
+ben.pendown()
+
+ben.hideturtle()
+
+turtle.done()
